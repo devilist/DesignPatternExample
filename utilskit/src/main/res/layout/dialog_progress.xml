@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:minHeight="@dimen/x280"
+    android:minWidth="@dimen/x280"
+    android:paddingBottom="@dimen/x7"
+    android:paddingLeft="@dimen/x1"
+    android:paddingRight="@dimen/x6"
+    android:paddingTop="@dimen/x1">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/easy_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:foregroundGravity="center"
+            android:indeterminate="true" />
+
+        <TextView
+            android:id="@+id/easy_progress_dialog_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/easy_progress_bar"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingTop="@dimen/x14"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x36"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</FrameLayout>
