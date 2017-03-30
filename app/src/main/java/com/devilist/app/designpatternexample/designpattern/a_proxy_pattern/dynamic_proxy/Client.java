@@ -11,14 +11,13 @@ public class Client {
     public static void main() {
         // 构造被代理者
         ILawsuit complainant = new Complainant();
-        // 构造动态代理
-        DynamicProxy proxy = new DynamicProxy(complainant);
+        // 构造调用处理器接口
+        DynamicHandler handler = new DynamicHandler(complainant);
         // 获取被代理类的ClassLoader
         ClassLoader classLoader = Complainant.class.getClassLoader();
-
         // 动态构造一个代理者律师
         ILawsuit proxyLawyer = (ILawsuit) Proxy.newProxyInstance(classLoader,
-                new Class[]{ILawsuit.class}, proxy);
+                new Class[]{ILawsuit.class}, handler);
 
         // 代理者律师去打官司
         proxyLawyer.submit();

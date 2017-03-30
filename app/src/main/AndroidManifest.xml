@@ -15,6 +15,20 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".aidl_demo.AIDLActivity"/>
+
+        <service
+            android:name="com.devilist.app.designpatternexample.aidl_demo.AIDLService"
+            android:exported="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.devilist.app.designpatternexample.aidl_demo.aidlservice"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </service>
+
     </application>
 
 </manifest>
