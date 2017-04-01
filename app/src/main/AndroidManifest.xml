@@ -3,6 +3,7 @@
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,6 +18,7 @@
         </activity>
 
         <activity android:name=".aidl_demo.AIDLActivity"/>
+        <activity android:name=".designpattern.a_proxy_pattern.service_hook.ServiceHookActivity"/>
 
         <service
             android:name="com.devilist.app.designpatternexample.aidl_demo.AIDLService"

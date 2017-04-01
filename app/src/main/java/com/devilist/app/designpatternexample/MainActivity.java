@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.devilist.app.designpatternexample.aidl_demo.AIDLActivity;
+import com.devilist.app.designpatternexample.designpattern.a_proxy_pattern.service_hook.ServiceHookActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         list.add(new String[]{"AIDL", AIDLActivity.class.getName()});
+        list.add(new String[]{"Service Hook", ServiceHookActivity.class.getName()});
     }
 }
 
